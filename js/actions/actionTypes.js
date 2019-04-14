@@ -1,0 +1,9 @@
+export const ON_RESIZE_WINDOW = 'ON_RESIZE_WINDOW';
+export const ON_SCROLLING = 'ON_SCROLLING';
+export const ON_MOUSE_MOVE = 'ON_MOUSE_MOVE';
+export const ON_TOUCH_MOVE = 'ON_TOUCH_MOVE';
+export const TOGGLE_BANNER = 'TOGGLE_BANNER';
+export const TOGGLE_RESUME = 'TOGGLE RESUME';
+export const TOGGLE_SKILLS = 'TOGGLE_SKILLS';
+export const TOGGLE_WORKS =  'TOGGLE_WORKS';
+export const TOGGLE_CONTACT = 'TOGGLE_CONTACT';

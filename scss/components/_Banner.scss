@@ -1,0 +1,138 @@
+.app-banner {
+  position: fixed;
+  top:0;
+  left:0;
+  width: 100vw;
+  height:720px;
+  overflow:hidden;
+  border-bottom:3px solid black;
+
+  ul,li {
+    padding:0;
+    margin:0;
+  }
+
+  canvas {
+    position: absolute;
+    z-index:-1;
+  }
+
+  .app-avatar-bg {
+    position: absolute;
+    top:0;
+    left:0;
+    z-index:-1;
+    cursor: pointer;
+  }
+
+  .app-drops {
+    pointer-events: none;
+  }
+
+  svg {
+    transform: translateZ(0);
+    border-bottom: 3px solid black;
+    polygon {
+      transform: translateZ(0);
+    }
+
+    polygon:hover {
+
+    }
+  }
+
+  .app-banner-line {
+    margin-top: 720px;
+  }
+
+  .app-banner-name {
+    color: white;
+  }
+
+  .app-skew {
+    &::after {
+      content: '';
+      display:block;
+      width:100%;
+      height:0;
+    }
+  }
+
+  .app-banner-content {
+
+    h1 {
+      text-transform: uppercase;
+      font-size: rem-calc(28px);
+      letter-spacing: 5px;
+
+      span {
+        font-weight:100;
+        transition: all 0.3s ease-out;
+        cursor: pointer;
+
+        &:hover {
+          background-color: black;
+          color:white;
+        }
+
+
+      }
+    }
+    .content-greeting {
+      margin-top:80px;
+      font-size:rem-calc(28px);
+    }
+    .content-design {
+      font-size:rem-calc(36px);
+      font-weight:100;
+    }
+    .content-linebreak {
+      border-top:0.5px solid black;
+      //border-bottom:0.5px solid black;
+      display:inline-block;
+      min-width:300px;
+    }
+    .content-develop {
+      margin-top:20px;
+      font-size: rem-calc(40px);
+      text-align: center;
+      span {
+        font-weight: bold;
+        letter-spacing: 5px;
+        padding: 0px 5px;
+        text-transform: uppercase;
+        display: inline-block;
+        background-color: #E50000;
+        color: white;
+        transition: all 0.3s ease-out;
+
+        &:hover {
+          background-color: #000;
+        }
+
+      }
+    }
+    .content-frontend {
+      margin-top: 40px;
+      text-align: center;
+      color: #E50000;
+      font-weight: 900;
+      font-size: rem-calc(60px);
+    }
+
+  }
+
+}
+
+
+@include breakpoint(small) {
+  .content-design {
+    margin-top: 40px;
+  }
+}
+
+@include breakpoint(medium) {
+  .content-design {
+    margin-top: 220px;
+  }
+}

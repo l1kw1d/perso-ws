@@ -1,0 +1,147 @@
+@include breakpoint(small) {
+  .app-block {
+    position: relative;
+    border-bottom: 0.5px dotted #DDD;
+    padding-bottom:80px;
+    background-color: white;
+
+    &>h1 {
+      text-align: center;
+      padding:40px 0px;
+    }
+
+  }
+}
+
+@include breakpoint(medium) {
+  .app-block {
+    &>h1 {
+      padding:80px 0px;
+    }
+
+  }
+}
+
+.app {
+  transition: opacity 0.5s linear;
+  padding-top:720px;
+}
+
+.app-resume {
+  .app-resume__content {
+
+  }
+}
+
+.app-works {
+  ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    li {
+      text-align: center;
+      margin: 0px 50px;
+    }
+  }
+}
+
+.app-contact {
+
+  overflow: hidden;
+  background-image: url("#{$assetsPath}/bg_train_resized.jpg");
+  background-size: cover;
+  background-position: center;
+  //background-blend-mode: multiply;
+  background-attachment: fixed;
+
+  padding-bottom: 300px;
+  border-bottom: none;
+
+  canvas {
+    position: absolute;
+    top:0;
+    left:0;
+  }
+
+  h1 {
+    padding-bottom: 40px;
+    color: white;
+  }
+  ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: space-around;
+    align-items: baseline;
+
+    li {
+      margin: 0px 20px;
+      color: white;
+      //font-style: italic;
+      font-weight:300;
+
+      img {
+        vertical-align: middle;
+        margin-right: 5px;
+      }
+
+      a {
+        color: white;
+        &::after {
+          display: block;
+          width:0%;
+          content: ' ';
+          border-bottom: 0.5px dotted #E50000;
+          transition: width 0.3s ease-out;
+        }
+
+        &:hover {
+          color: #E50000;
+          &::after {
+            width:100%
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+}
+
+.app-footer {
+  font-size: 14px;
+  text-align: center;
+  padding-bottom: 0px;
+  p {
+    padding-top: 20px;
+  }
+  border:0;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  .app-scrollbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    z-index: 999999;
+    pointer-events: none;
+    transition: opacity 0.25s ease-out;
+    //background-color: red;
+    //
+    //div {
+    //  background-color: red;
+    //}
+
+  }
+}
+
+@supports (-ms-ime-align:auto) {
+  .app-scrollbar {
+    display: none;
+  }
+}
